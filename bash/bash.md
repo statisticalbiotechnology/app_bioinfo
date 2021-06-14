@@ -189,3 +189,18 @@ C6: Count the number of unique tryptic peptides longer than 7 amino acids in the
 ```
 cat rat.1.protein.faa | gawk '/^>/{print s; s=""; next } {s=s $0} END{print s}' | gawk -F '[KR]' '{for (i=0;++i<NF;) {if (length($i)>6) print $i} }' | sort | uniq | wc -l
 ```
+
+Bonus excercise:
+Count the number of tryptic peptides length > 7 in a couple of proteomes (Credit: Davide Buzzao)
+
+```
+for i in `seq 0 6`;
+do 
+    if [ ! -f ${organisms[$i]}.protein.faa ]; then 
+        echo ${species[$i]}
+        curl https://ftp.ncbi.nlm.nih.gov/refseq/${species[$i]}/mRNA_Prot/${organisms[$i]}.1.protein.faa.gz 2> /dev/null | gunzip -cd | gawk '/^>/{print s; s=""; next } {s=s $0} END{print s}' | gawk -F '[KR]' '{for (i=0;++i<NF;) {if (length($i)>6) print $i} }' | sort | uniq | wc -l
+    fi
+done
+```
+
+
