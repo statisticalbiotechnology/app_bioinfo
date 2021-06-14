@@ -45,10 +45,10 @@ In unix all processes/programs are executed with streams
 There are three standard ones:
 * stdin (0)
 * stdout (1)
-* stderr (2) 
+* stderr (2)
 
 
-stdin => 
+stdin =>
 Program => stdout
 => stderr  
 
@@ -62,12 +62,12 @@ Stdout:
 
 Stderr:
 ```
-2>file 2>>file 
+2>file 2>>file
 ```
 
 Stdin:
 ```
-<file 
+<file
 ```
 
 Pipes:
@@ -83,7 +83,7 @@ Redirecting sterr to stdout
 
 Powerful option to stack sets of commands ontop of each other
 
-I.e. count the numbers of mentions of NCBI at their homepage 
+I.e. count the numbers of mentions of NCBI at their homepage
 
 ```
 curl https://www.ncbi.nlm.nih.gov 2> /dev/null | grep -ic NCBI
@@ -118,7 +118,7 @@ will replace all 'm' letters with 'q'
 
 ### awk
 
-Line and Field based mainipulation. 
+Line and Field based mainipulation.
 The awk script is executed once per line on stdin
 
 #### Command structure
@@ -146,7 +146,7 @@ Fields are the strings apearing between field separators. You can set the field 
 is used for comma separated files.
 
 
-There are branching structures like 
+There are branching structures like
 ```if($1==3) print $2; else print $4```
 
 Jump to next line of the input file:
@@ -167,7 +167,7 @@ C1: Count the number of protein sequences in the file
 
 C2:  Count the number of amino acids in the file
 ```
-cat rat.1.protein.faa | gawk '!/^>/{n=n+length($0)} END{print n}' 
+cat rat.1.protein.faa | gawk '!/^>/{n=n+length($0)} END{print n}'
 ```
 
 C3: create a file that gives all the amino acid sequence in one flow, without line-breaks, for each protein record. I.e. each record should consist of one row of a protein sequence name and one long row with the amino acid sequence.
@@ -194,13 +194,14 @@ Bonus excercise:
 Count the number of tryptic peptides length > 7 in a couple of proteomes (Credit: Davide Buzzao)
 
 ```
+species=(B_taurus D_rerio H_sapiens M_musculus R_norvegicus S_scrofa X_tropicalis)
+organisms=(cow zebrafish human mouse rat pig frog)
+
 for i in `seq 0 6`;
-do 
-    if [ ! -f ${organisms[$i]}.protein.faa ]; then 
+do
+    if [ ! -f ${organisms[$i]}.protein.faa ]; then
         echo ${species[$i]}
         curl https://ftp.ncbi.nlm.nih.gov/refseq/${species[$i]}/mRNA_Prot/${organisms[$i]}.1.protein.faa.gz 2> /dev/null | gunzip -cd | gawk '/^>/{print s; s=""; next } {s=s $0} END{print s}' | gawk -F '[KR]' '{for (i=0;++i<NF;) {if (length($i)>6) print $i} }' | sort | uniq | wc -l
     fi
 done
 ```
-
-
