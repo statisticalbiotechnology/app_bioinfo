@@ -1,3 +1,17 @@
 # Version control
 A motivating example of "manual" version control.
-![](https://sequencediagram.org/index.html#initialData=C4S2BsFMAIBUE8AOIDGBDc0AKbGQE7QDq+YIAdgObQDKKk5apA9gFCsCC4qkAtAHwAhZgCMAXAFl4AfUS4C0gCb40AM2AA6RcxSdu9AQGEAFk26RJMuXnxKV6rTtblmwGMwBuBaCbMgL0ACiimRU0NooAK4AtgzAzq7uXoTC4kEhoGERMXF6PAA8vL745pay8rbKasDSAEwAjAAMAGz19Y66qYXFpVLlNnbVdU2t7RF59IWpZdYKqR2sqUamJf4zFdLz4y5u0J7eXDxi0BIElBTU2bHkwADOE3xCousDHmNOhwb8PWt9s7ZvBY7JLeH4BYKhS46HI3B7dFa9KwbVQUDALLpFBG-JEDFGMcBAxJ7ZLQT7gjIXcLQ67xMkCaZ-ZGo8C1BZ075YiyM3HM1njVhAA)
+![](img/paper.png)
+
+Version Control: A method to tracking and managing changes to text files. The system makes common version of a set of files. 
+
+Version control allows users to:
+* Access the same set of files.
+* Access older versions of the files (like an undo button).
+* Track changes made to the files
+* Handle version conflicts
+* Store backed-up files
+
+
+Can be used:
+* by teams as well as individuals.
+* for source code or other text files
