@@ -172,7 +172,7 @@ cat rat.1.protein.faa | gawk '!/^>/{n=n+length($0)} END{print n}'
 
 C3: create a file that gives all the amino acid sequence in one flow, without line-breaks, for each protein record. I.e. each record should consist of one row of a protein sequence name and one long row with the amino acid sequence.
 ```
-cat rat.1.protein.faa | gawk '/^/{print s; print $0; s="" }; !/^>/{s=s $0} END{print s}'
+cat rat.1.protein.faa | gawk '/^>/{print s; print $0; s=""; next }; {s=s $0} END {print s}'
 ```
 
 C4: Count the number of tryptic peptides in the file, i.e. any amino acid sequence pattern starting at either an N-terminal or after a K/R-residue and  ending with a K or R residue
