@@ -162,30 +162,30 @@ wget https://ftp.ncbi.nlm.nih.gov/refseq/R_norvegicus/mRNA_Prot/rat.1.protein.fa
 gunzip rat.1.protein.faa.gz
 ```
 
-C1:
+C1: Count the number of protein sequences in the file
 ```cat rat.1.protein.faa | gawk '/^>/{n=n+1} END{print n}' ```
 
-C2:
+C2:  Count the number of amino acids in the file
 ```
 cat rat.1.protein.faa | gawk '!/^>/{n=n+length($0)} END{print n}' 
 ```
 
-C3:
+C3: create a file that gives all the amino acid sequence in one flow, without line-breaks, for each protein record. I.e. each record should consist of one row of a protein sequence name and one long row with the amino acid sequence.
 ```
-cat rat.1.protein.faa | gawk '/^>/{print s; print $0; s="" }; !/^>/{s=s $0} END{print s}'
+cat rat.1.protein.faa | gawk '/^/{print s; print $0; s="" }; !/^>/{s=s $0} END{print s}'
 ```
 
-C4:
+C4: Count the number of tryptic peptides in the file, i.e. any amino acid sequence pattern starting at either an N-terminal or after a K/R-residue and  ending with a K or R residue
 ```
 cat rat.1.protein.faa | gawk '/^>/{print s; s=""; next } {s=s $0} END{print s}' | gawk -F '[KR]' '{for (i=0;++i<NF;) {print $i} }' | wc -l
 ```
 
-C5:
+C5: Count the number of tryptic peptides longer than 7 amino acids in the file
 ```
 cat rat.1.protein.faa | gawk '/^>/{print s; s=""; next } {s=s $0} END{print s}' | gawk -F '[KR]' '{for (i=0;++i<NF;) {if (length($i)>6) print $i} }' | wc -l
 ```
 
-C6:
+C6: Count the number of unique tryptic peptides longer than 7 amino acids in the file, i.e. remove any duplicate peptides.
 ```
 cat rat.1.protein.faa | gawk '/^>/{print s; s=""; next } {s=s $0} END{print s}' | gawk -F '[KR]' '{for (i=0;++i<NF;) {if (length($i)>6) print $i} }' | sort | uniq | wc -l
 ```
