@@ -32,6 +32,15 @@ Can be used:
 * by teams as well as individuals.
 * for source code or other text files
 
+## Centralized vs. Distributed Repositories
+
+Older systems like RCS, CVS and subversion are centralized.  
+![](img/central.png)
+
+Git and mercury are instead distributed version control systems.
+![](img/distributed.png)
+
+
 ### Git
 
 * `git commit`: adding your edits in files to the local repository
