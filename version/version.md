@@ -39,6 +39,8 @@ Can be used:
 `git status`: Tells which files that are edited
 `git add`: Track a file.
 `git checkout`: Retrieve a file from the local repository.
+`git push`: Push the edits from local repository into the remote repository. 
+
 
 
 
