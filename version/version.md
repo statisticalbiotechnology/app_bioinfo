@@ -34,11 +34,39 @@ Can be used:
 
 ### Git
 
-`git commit`: adding your edits in files to the local repository
-`git diff`: Checking differences between files and local repository
-`git status`: Tells which files that are edited
-`git add`: Track a file.
-`git checkout`: Retrieve a file from the local repository.
+* `git commit`: adding your edits in files to the local repository
+* `git diff`: Checking differences between files and local repository
+* `git status`: Tells which files that are edited
+* `git add`: Track a file.
+* `git checkout`: Retrieve a file from the local repository.
+* `git push`: Push the edits from local repository into the remote repository. 
+* `git pull`: Retrieve all commits from the remote back to the local repository.
+* `git init`: Creates a new local repository.
+* `git clone`: Copy a remote repository into your local repository.
 
+
+## What should go under version control
+
+Should be under version control:
+* Source code
+* Text files
+
+Should **not** be under version control:
+* Files produced from files under version control
+* Binaries
+
+Maybe:
+* Data
+
+## IDE
+
+Most integrated development environments (IDEs) have support for git.
+
+## Pull request
+
+(Not part of git, but bitbucket/github)  
+
+If you want to edit someone elses repository on github/bitbucket, you normaly clone the repository
+make your edits, push them to your cloned directory. You then set up a *pull request*, that will be sent to the owner of the repository, that allows the owner to incorporate the edits (or ignore them).
 
 
