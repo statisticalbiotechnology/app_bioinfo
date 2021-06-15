@@ -14,8 +14,6 @@ Typical examples:
 A motivating example of "manual" version control.
 ![](img/paper.png)
 
-
-
 ### Version Control Systems
 
 A method to tracking and managing changes to text files. The system makes common version of a set of files. 
@@ -78,4 +76,6 @@ Most integrated development environments (IDEs) have support for git.
 If you want to edit someone elses repository on github/bitbucket, you normaly clone the repository
 make your edits, push them to your cloned directory. You then set up a *pull request*, that will be sent to the owner of the repository, that allows the owner to incorporate the edits (or ignore them).
 
+## How to move an offline repository
 
+This stack overflow thread gives a good description of how to migrate a repository from [an offline computer](https://stackoverflow.com/questions/28027190/copy-git-repository-to-offline-machine-and-pushing-pulling-via-memory-stick). It comes down to copy the full .git subdirectory that sits in the root of each local git repository.
