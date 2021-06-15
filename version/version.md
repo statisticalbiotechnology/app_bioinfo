@@ -1,8 +1,24 @@
-# Version control
+# Version control and Code repositories
+
+Modern open-source development is dependent on code repositories, to 
+diseminate and get feedback on software and code. Such systems are dependent on version control systems.
+
+Typical examples: 
+
+* [Github](github.com)
+* [Bitbucket](bitbucket.com)
+
+
+## Version Control
+
 A motivating example of "manual" version control.
 ![](img/paper.png)
 
-Version Control: A method to tracking and managing changes to text files. The system makes common version of a set of files. 
+
+
+### Version Control Systems
+
+A method to tracking and managing changes to text files. The system makes common version of a set of files. 
 
 Version control allows users to:
 * Access the same set of files.
@@ -15,3 +31,7 @@ Version control allows users to:
 Can be used:
 * by teams as well as individuals.
 * for source code or other text files
+
+### Git
+
+`git commit`: adding your edits in files to the local repository
