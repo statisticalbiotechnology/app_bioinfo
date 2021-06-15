@@ -35,3 +35,4 @@ Can be used:
 ### Git
 
 `git commit`: adding your edits in files to the local repository
+`git diff`: Checking differences between files and local repository
