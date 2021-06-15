@@ -57,6 +57,7 @@ Git and mercury are instead distributed version control systems.
 Should be under version control:
 * Source code
 * Text files
+* Make files
 
 Should **not** be under version control:
 * Files produced from files under version control
