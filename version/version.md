@@ -36,3 +36,4 @@ Can be used:
 
 `git commit`: adding your edits in files to the local repository
 `git diff`: Checking differences between files and local repository
+`git status`: Tells which files that are edited
