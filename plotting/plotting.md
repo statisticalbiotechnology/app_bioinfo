@@ -18,7 +18,9 @@ Cons:
 
 I.e. great for use-once code, or documentation, but not for production code.
 
-Install: `pip install jupyterlab`
+Install: `$ pip install jupyterlab`
+
+Run by issuing `$ jupyter-lab`
 
 ### Numpy
 
@@ -39,12 +41,13 @@ x=np.linalg.solve(A,b)
 
 Package that handles tabular data in python. The package emulates the data frame class of R.
 
-An example:
+An example, where we define a DataFrame from scratch:
 
 ```
 import pandas as pd
 data = [['Alex',10],['Bob',12],['Clarke',13]]
 df = pd.DataFrame(data,columns=['Name','Age'])
+df.to_markdown()
 ```
 |    | Name   |   Age |
 |---:|:-------|------:|
@@ -52,10 +55,45 @@ df = pd.DataFrame(data,columns=['Name','Age'])
 |  1 | Bob    |    12 |
 |  2 | Clarke |    13 | 
 
-Or 
+Or load a predefined DataFrame:
 
 ```
 import pandas as pd
 import seaborn as sns
 tips = sns.load_dataset("tips")
+tips
+```
+
+One can get an overview of the table by a command `describe`:
+
+```
+tips.describe()
+```
+
+You can access a specific column by its name, e.g.  
+`tips["total_bill"]`
+
+You can create new columns,
+```
+tips["tip_rate"] = tips["tip"]/tips["total_bill"]
+```
+
+Similarly you can access specific rows in a table with `loc[index]`, e.g.
+
+```
+tips.loc[tips["sex"]=="Female"].describe()
+```
+
+## Plotting in python
+
+There are several plotting packages available in python
+
+* matplotlib - most detailed package, the original
+* seaborn - an higher level package making prettier plots
+* many others, e.g. bokeh, plottly, pygal
+
+### Matplotlib
+
+Made to mimic matlabs plotting functionality
+Lets make some examples.
 
