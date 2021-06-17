@@ -8,8 +8,8 @@ Spin off from the [IPython](https://ipython.readthedocs.io/en/stable/) project. 
 Enables a mixture of documentation, code, and results to appear in the same page.
 
 Pros:
-* Great documentation
-* Easy to dessiminate
+* Great for documentation
+* Easy way to dessiminate ideas
 * Quick results
 
 Cons:
@@ -24,7 +24,7 @@ Run by issuing `$ jupyter-lab`
 
 ### Numpy
 
-Numpy enambles vector and matrix calculkations for python. 
+Numpy enambles vector and matrix calculations for python. 
 
 Many matrix operations are as fast in numpy as in C or C++.
 
@@ -36,7 +36,6 @@ A=np.array([[3,1],[1,2]])
 b=np.array([9,8])
 x=np.linalg.solve(A,b)
 ```
-
 ### Pandas
 
 Package that handles tabular data in python. The package emulates the data frame class of R.
@@ -55,7 +54,7 @@ df.to_markdown()
 |  1 | Bob    |    12 |
 |  2 | Clarke |    13 | 
 
-Or load a predefined DataFrame:
+Or load a predefined DataFrame, in this case I download from seaborn, which has several datasets available for illustration, which can be listed through `seaborn.get_dataset_names()`
 
 ```
 import pandas as pd
