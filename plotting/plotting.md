@@ -96,3 +96,17 @@ There are several plotting packages available in python
 Made to mimic matlabs plotting functionality
 Lets make some examples.
 
+### Seaborn
+
+Higher level functionality. Works in tandem with pandas.
+
+
+### General advise on plotting
+
+* Avoid using too many (>4) series in the same plot
+* Avoid colors that are hard for colorblinds to discern. Check out [Wong](https://www.nature.com/articles/nmeth.1618)
+* Use histograms, kde, hexbins, colomaps etc, when there aree too many datapoints to discern the individual data points. Do not use scatter plots for such data.
+* Label your axes
+* Use large fonts
+* Try to make your plot in Black and White. It is often a requirement for journals, but it is also a good way to see if it is clear enough.
+* Make your plotting code a part of project code. This is particularly urgent for figures of a manuscript.
