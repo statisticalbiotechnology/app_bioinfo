@@ -1,6 +1,6 @@
-x = Channel.from( 'Alice', 'Bob', 'Charly')
+x = Channel.from( 'Alice', 'Bob', 'Charlie')
 
-process simpleSum {
+process helloPerson {
     input:
     val x
 

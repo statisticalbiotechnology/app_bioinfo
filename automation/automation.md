@@ -45,9 +45,9 @@ Built around the concepts of Processeses and channels. A process takes one or mo
 
 An example:
 ```
-x = Channel.from( 'Alice', 'Bob', 'Charly')
+x = Channel.from( 'Alice', 'Bob', 'Charlie')
 
-process simpleSum {
+process helloPerson {
     input:
     val x
 
@@ -58,11 +58,18 @@ process simpleSum {
 
 Another example [nextflow-script](nextflow/example.nf).
 
+#### Logging and tracing of nextflow execution
+
+You can track your previous runs with the command `nextflow log`. You will get more specific information on which output directories that were made by specifying a specific run, e.g. `nextflow log jovial_shockley`
+
+
 ### nf-core
 
 As we tend to do the same operations as everyone else in bioinformatics, there is a need to disemenate well functioning workflows.
 
 There are repositories of nextflow scripts at [nf-core](https://nf-co.re/)
+
+Another set of curtated piplines are stored at [awsome-nextflow](https://github.com/nextflow-io/awesome-nextflow), curated by nextflow rather than nf-core.
 
 For snakemake a similar repository can be found at [snakemake-workflows](https://github.com/snakemake-workflows).
 
