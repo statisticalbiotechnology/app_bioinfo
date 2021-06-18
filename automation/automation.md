@@ -58,6 +58,8 @@ process helloPerson {
 
 Another example [nextflow-script](nextflow/example.nf).
 
+There is a good tutorial for nextflow available [here](https://www.seqera.io/training/)
+
 #### Logging and tracing of nextflow execution
 
 You can track your previous runs with the command `nextflow log`. You will get more specific information on which output directories that were made by specifying a specific run, e.g. `nextflow log jovial_shockley`
