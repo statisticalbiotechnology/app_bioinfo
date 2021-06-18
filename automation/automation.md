@@ -1,6 +1,9 @@
 # Build automation
 
-Frequently your desirable reult is a product of several processing steps that needs to be executed sequential. Often the same set of steps needs to be executed in similar projects as well. Also sometimes you want to tweek some of the "in-the-middle" processing steps. Would it not be sweet if you did not have to reprocess all your steps up to that point? Here build automation can help you.
+Frequently your computational goal is a product of several processing steps that needs to be executed sequential. Often the same set of steps needs to be executed in similar projects as well. Also sometimes you want to tweek some of the "in-the-middle" processing steps. Would it not be sweet if you did not have to reprocess all your steps up to that point? Here build automation can help you.
+
+![](img/c_build.png)
+
 
 ## GNU Make
 
@@ -53,4 +56,15 @@ process simpleSum {
 }
 ```
 
+Another example [nextflow-script](nextflow/example.nf).
+
+### nf-core
+
+As we tend to do the same operations as everyone else in bioinformatics, there is a need to disemenate well functioning workflows.
+
+There are repositories of nextflow scripts at [nf-core](https://nf-co.re/)
+
+For snakemake a similar repository can be found at [snakemake-workflows](https://github.com/snakemake-workflows).
+
+A common repository can be found at [workflowhub](https://workflowhub.eu/)
 
