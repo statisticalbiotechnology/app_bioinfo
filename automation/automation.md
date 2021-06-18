@@ -58,7 +58,12 @@ process helloPerson {
 
 Another example [nextflow-script](nextflow/example.nf).
 
+We have a couple of "zipf's law" workflow from the sw-carpentry module:
+* My version, with some notable limitation, [zipf.nf](zipf_nf/zipf.nf)
+* Renauld van Damme's complete solution, [renauld.nf](zipf_nf/renauld.nf)
+
 There is a good tutorial for nextflow available [here](https://www.seqera.io/training/)
+
 
 #### Logging and tracing of nextflow execution
 
